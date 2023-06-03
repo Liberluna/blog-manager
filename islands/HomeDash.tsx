@@ -11,7 +11,7 @@ export default function Counter(props: Props) {
   useEffect(()=>{
     try{
       const token = localStorage.getItem("gh-token")
-      const octokit = new Octokit({
+      const window.octokit = new Octokit({
         auth: token,
       })
       alert("inited octokit!")
@@ -29,8 +29,7 @@ export default function Counter(props: Props) {
   
   return (
     <div>
-      home dash
-      <div>{ userData }</div>
+      <a>新しい投稿を作成する</a>
     </div>
   );
 }
