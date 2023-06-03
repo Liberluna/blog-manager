@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-import { Octokit } from "https://esm.sh/@octokit/core"
+import { Octokit } from "https://cdn.skypack.dev/@octokit/core"
 
 interface Props {
 
