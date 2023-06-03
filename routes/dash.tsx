@@ -7,6 +7,7 @@ export default function(props: PageProps) {
       <div class="text-2xl">
         Dash
       </div>
+      <HomeDash/>
     </div>
   </>
 }
