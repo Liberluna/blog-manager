@@ -24,11 +24,10 @@ export default function Counter(props: Props) {
         <input placeholder="nakasyou.png" class="border"/>
       </div>
       <div class="my-5">
-        <button>Pull Requestを提出する</button>
+        <button class="rounded bg-emerald-400 text-white">Pull Requestを提出する</button>
       </div>
       <div>
-        <textarea class="border w-full h-full">
-          ここにMarkdownを入力...
+        <textarea class="border w-full h-screen" placeholder="ここにMarkdownを入力...">
         </textarea>
       </div>
     </div>
