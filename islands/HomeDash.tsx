@@ -12,15 +12,17 @@ export default function Counter(props: Props) {
     }
     const params = new URLSearchParams(location.search)
     
-    if(!params.has("code"))
+    if(!params.has("code")){
       re()
-   
+      return
+    }
     const res = await fetch(`/api/auth/${params.get("code")}`)
     const json = await res.json()
     
-    if(json.error === "error")
+    if(json.error === "error"){
       re()
-    alert(json.token)
+      return
+    }
   },[])
   
   return (
