@@ -9,7 +9,7 @@ export default function Counter(props: Props) {
   const [userData, setUserData] = useState("")
   
   useEffect(async ()=>{
-    const token = localStrage.getItem("gh-token")
+    const token = localStorage.getItem("gh-token")
     alert("0")
     alert(token)
   },[])
