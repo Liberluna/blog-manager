@@ -8,7 +8,21 @@ export const handler = async  (_req: Request, _ctx: HandlerContext): Promise<Res
   const apiRes = await fetch(reqURL)
   const apiTxt = await apiRes.text()
   
-  //const params = new URLSearchParams(apiTxt)
+  const params = new URLSearchParams(apiTxt)
   
-  return new Response(apiTxt);
+  if(params.has("error")){
+    return new Response(`{"error": "error"}`, {
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+  }
+  
+  return new Response(JSON.stringify({
+    token: params.get("access_token"),
+  }), {
+    headers: {
+      "Content-Type": "application/json",
+    }
+  });
 };
