@@ -5,6 +5,7 @@ interface Props {
 }
 
 export default function Counter(props: Props) {
+  const [userData, setUserData] = useState("")
   
   useEffect(async ()=>{
     function re(){
@@ -23,12 +24,18 @@ export default function Counter(props: Props) {
       re()
       return
     }
-    alert(json.token)
+    localStorage.setItem("gh-token", json.token)
+    
+    await (async()=>{
+      const userRes = await fetch(`https://api.github.com/user`)
+      setUserData(await userRes.text())
+    })();
   },[])
   
   return (
     <div>
       home dash
+      <div>{ userData }</div>
     </div>
   );
 }
