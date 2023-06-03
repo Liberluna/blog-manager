@@ -18,7 +18,9 @@ export default function Counter(props: Props) {
     const res = await fetch(`/api/auth/${params.get("code")}`)
     const json = await res.json()
     
-    alert(JSON.stringify(json))
+    if(json.error === "error")
+      re()
+    alert(JSON.stringify(json).token)
   },[])
   
   return (
