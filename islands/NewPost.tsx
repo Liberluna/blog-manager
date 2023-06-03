@@ -2,7 +2,6 @@ import { useState, useEffect } from "preact/hooks";
 
 export default function Counter(props: Props) {
   const [userData, setUserData] = useState("")
-  const 
   useEffect(()=>{
     const token = localStorage.getItem("gh-token")
     const octokit = new Octokit({
