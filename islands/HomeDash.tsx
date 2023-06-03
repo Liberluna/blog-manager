@@ -8,12 +8,16 @@ interface Props {
 export default function Counter(props: Props) {
   const [userData, setUserData] = useState("")
   
-  useEffect(async ()=>{
-    const token = localStorage.getItem("gh-token")
-    const octokit = new Octokit({
-      auth: token,
-    })
-    alert("inited octokit!")
+  useEffect(()=>{
+    try{
+      const token = localStorage.getItem("gh-token")
+      const octokit = new Octokit({
+        auth: token,
+      })
+      alert("inited octokit!")
+    }catch(e){
+      alert("error")
+    }
   },[])
   
   return (
