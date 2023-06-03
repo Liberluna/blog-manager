@@ -8,11 +8,10 @@ interface Props {
 export default function Counter(props: Props) {
   const [mode, setMode] = useState("new-post")
   
-  
   return (
     <div>
       <a>新しい投稿を作成する</a>
-      <NewPost/>
+      { mode === "new-post" && <NewPost/> }
     </div>
   );
 }
