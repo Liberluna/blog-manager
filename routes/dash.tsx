@@ -1,4 +1,5 @@
 import { PageProps } from "$fresh/server.ts"
+import HomeDash from "../islands/HomeDash.tsx"
 
 export default function(props: PageProps) {
   return <>
