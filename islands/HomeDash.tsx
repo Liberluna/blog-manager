@@ -16,7 +16,13 @@ export default function Counter(props: Props) {
       })
       alert("inited octokit!")
     }catch(e){
-      alert("error")
+      document.body.innerHTML = `<div>
+        <span>${e.name}:</span>
+        <span>${e.message}</span>
+      </div>
+      <div>
+        ${e.stack.replaceAll("\n","<br>")}
+      </div>`
     }
   },[])
   
