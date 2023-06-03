@@ -15,7 +15,7 @@ export default function Counter(props: Props) {
   return (
     <div>
       <a>新しい投稿を作成する</a>
-      {mode==="new-post" ? <NewPost /> : null}
+      <NewPost show={mode==="new-post"}/>
     </div>
   );
 }
