@@ -20,7 +20,7 @@ export default function Counter(props: Props) {
     
     if(json.error === "error")
       re()
-    alert(JSON.stringify(json).token)
+    alert(json.token)
   },[])
   
   return (
