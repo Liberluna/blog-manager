@@ -23,6 +23,7 @@ export default function Counter(props: Props) {
       re()
       return
     }
+    alert(json.token)
   },[])
   
   return (
