@@ -12,6 +12,10 @@ export default function Counter(props: Props) {
   return (
     <div>
       <div class="my-5">
+        <span>タイトル</span>
+        <input class="border"/>
+      </div>
+      <div class="my-5">
         <span>表示名</span>
         <input class="border"/>
       </div>
