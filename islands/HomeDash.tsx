@@ -1,4 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
+import { Octokit } from "octokit"
 
 interface Props {
 
@@ -27,8 +28,15 @@ export default function Counter(props: Props) {
     localStorage.setItem("gh-token", json.token)
     
     await (async()=>{
-      const userRes = await fetch(`https://api.github.com/user`)
-      setUserData(await userRes.text())
+      const octokit = new Octokit({
+        auth: json.token,
+      })
+      const res = await octokit.request('GET /user', {
+        headers: {
+          'X-GitHub-Api-Version': '2022-11-28'
+        }
+      })
+      setUserData(res)
     })();
   },[])
   
