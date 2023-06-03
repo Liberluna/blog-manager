@@ -24,7 +24,7 @@ export default function Counter(props: Props) {
         <input placeholder="nakasyou.png" class="border"/>
       </div>
       <div>
-        <textarea>
+        <textarea class="border w-full">
           ここにMarkdownを入力...
         </textarea>
       </div>
