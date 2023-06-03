@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function Counter(props: Props) {
-  console.log(window)
+  window.addEventListener("load",alert)
   return (
     <div>
       home dash
