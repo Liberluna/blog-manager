@@ -10,8 +10,10 @@ export default function Counter(props: Props) {
   
   useEffect(async ()=>{
     const token = localStorage.getItem("gh-token")
-    alert("0")
-    alert(token)
+    const octokit = new Octokit({
+      auth: token,
+    })
+    alert("inited octokit!")
   },[])
   
   return (
