@@ -11,17 +11,17 @@ export default function Counter(props: Props) {
   
   return (
     <div>
-      <div>
+      <div class="my-5">
         <span>表示名</span>
-        <input/>
+        <input class="border"/>
       </div>
-      <div>
+      <div class="my-5">
         <span>ID</span>
-        <input/>
+        <input class="border"/>
       </div>
-      <div>
+      <div class="my-5">
         <span>アイコンのPath</span>
-        <input placeholder="nakasyou.png"/>
+        <input placeholder="nakasyou.png" class="border"/>
       </div>
       <div>
         <textarea>
