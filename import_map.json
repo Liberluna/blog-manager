@@ -8,6 +8,6 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
     "twind": "https://esm.sh/twind@0.16.19",
     "twind/": "https://esm.sh/twind@0.16.19/",
-    "octokit": "https://cdn.skypack.dev/octokit"
+    "octokit": "https://cdn.skypack.dev/@octokit/core"
   }
 }
