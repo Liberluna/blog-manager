@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function Counter(props: Props) {
-  alert("KoNNiTiWa")
+  console.log(window)
   return (
     <div>
       home dash
