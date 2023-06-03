@@ -1,16 +1,21 @@
 import { useState, useEffect } from "preact/hooks";
+import NewPost from "./NewPost.tsx";
 
 interface Props {
 
 }
 
 export default function Counter(props: Props) {
-  const [userData, setUserData] = useState("")
+  const [mode, setMode] = useState("new-post")
   
+  function newPost(){
+    setMode("new-post")
+  }
   
   return (
     <div>
       <a>新しい投稿を作成する</a>
+      {mode==="new-post" ? <NewPost /> : null}
     </div>
   );
 }
