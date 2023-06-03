@@ -1,11 +1,13 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 
 interface Props {
 
 }
 
 export default function Counter(props: Props) {
-  window.addEventListener("load",alert)
+  useEffect(()=>{
+    alert("a")
+  },[])
   return (
     <div>
       home dash
