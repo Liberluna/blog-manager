@@ -5,19 +5,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Fresh App</title>
+        <title>Liberluna Blog Manager</title>
       </Head>
-      <div class="p-4 mx-auto max-w-screen-md">
-        <img
-          src="/logo.svg"
-          class="w-32 h-32"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <p class="my-6">
-          Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-          file, and refresh.
-        </p>
-        <Counter start={3} />
+      <div class="mx-10">
+        <div class="mx-auto">Liberluna Blog Manager</div>
+        <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7ad00edcde8a0a74d3e6">認証ボタン</a>
       </div>
     </>
   );
