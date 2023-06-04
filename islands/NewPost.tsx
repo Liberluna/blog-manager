@@ -5,7 +5,7 @@ export default function Counter(props: Props) {
   const [userData, setUserData] = useState("")
   useEffect(()=>{
     const token = localStorage.getItem("gh-token")
-    const octokit = new Octokit({
+    window.octokit = new Octokit({
       auth: token,
     })
   },[])
