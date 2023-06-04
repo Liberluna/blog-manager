@@ -1,4 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
+import { Octokit } from "octokit"
 
 export default function Counter(props: Props) {
   const [userData, setUserData] = useState("")
